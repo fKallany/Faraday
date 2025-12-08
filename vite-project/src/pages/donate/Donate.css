@@ -1,0 +1,111 @@
+.donate-container {
+    background: #ffffff;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.donate-title {
+    margin-top: 90px;
+    font-size: 22px;
+    padding: 10px 20px;
+    background: #F79C33;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 600px;
+}
+
+.donate-box {
+    width: 90%;
+    max-width: 420px;
+    background: #082B5D;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 40px;
+}
+
+.donate-item {
+    width: 90%;
+    height: 55px;
+    background: #F79C33;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-donate {
+    background: #082B5D;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.donate-item.gray {
+    background: #B5B5B5;
+}
+
+.donate-item.lightblue {
+    background: #7AADE7;
+}
+
+.input-free-container {
+    width: 90%;
+    height: 55px;
+    background: #e3e3e3;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    gap: 10px;
+}
+
+.input-free-container span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-free {
+    border: none;
+    background: transparent;
+    flex: 1;
+    font-size: 18px;
+    outline: none;
+}
+
+.btn-donate-free {
+    background: #082B5D;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
