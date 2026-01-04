@@ -1,111 +1,136 @@
+# ⚡ Projeto Faraday
 
-<div align="center" name="inicio">
-  <a href="*"><img title="instituto" src="projetando.png" style="width: 500px;" /></a>
-</div>
-<h4>
-  Sumário: 
- <a href="#sobre">Sobre</a> • 
- <a href="#equipe">Equipe</a> • 
- <a href="#cliente">Cliente</a> • 
-<a href="#requisitos">Requisitos</a> •
-<a href="#instalacao">Instalação</a> •
-<a href="#estrutura">Estrutura</a>
-</h4>
+Plataforma web para gestão de voluntários e doações do Instituto VORP, com sistema de autenticação e banco de dados na nuvem.
 
-<a name="sobre"></a>
-## Sobre
+---
 
-Olá, Este projeto está sendo desenvolvido para atender às necessidades do Instituto Vorp, uma instituição voltada para ações sociais. Vamos desenvolver um sistema digital acessível ao público, que permita cadastrar doações, doadores, beneficiários e instituições atendidas, além de consultar relatórios e histórico de ações.
-O sistema visa organizar e centralizar informações, facilitar o engajamento de novos doadores e aumentar a transparência e eficiência das operações do Instituto.
-A realização deste projeto é ligada diretamente a Universidade Federal do Ceará-UFC na disciplina de PROJETO INTEGRADO I do curso de Sistemas e Mídias Digitais.
+## 🚀 Tecnologias Utilizadas
 
+### Frontend (Interface)
+- **React + Vite**: Framework principal para construção da interface.
+- **React Router Dom**: Gerenciamento de rotas e navegação.
+- **Axios**: Cliente HTTP para comunicação com a API.
+- **CSS Modules**: Estilização dos componentes.
 
-<a name="equipe"></a>
-##  Membros da Equipe
-|  NOME                           |  FUNÇÃO                    |
-|  ----------------------------   |  --------------------------|
-|  Ana Luiza                      | Gestor de projeto e atendimento ao cliente   | 
-|  Pedro Manoel                   | Desenvolvedor Front-end                      |
-|  Emanuel Silva                  | Desenvolvedor Back-end                        |
-|  Alidja Dafny                       | Designer de Experiência (UX/UI)             |
-|  Maria Letícia                  | QA / Testes e Documentação                   |
+### Backend (API)
+- **Node.js**: Ambiente de execução JavaScript.
+- **Express**: Framework para criação da API REST.
+- **Sequelize (ORM)**: Gerenciamento e modelagem do banco de dados.
+- **PostgreSQL**: Banco de dados relacional.
+- **JWT (JsonWebToken)**: Sistema de autenticação e segurança.
+- **Bcrypt**: Criptografia de senhas.
+- **Dotenv**: Gerenciamento de variáveis de ambiente.
+- **Nodemon**: Utilitário para desenvolvimento (hot-reload).
 
-<a name="cliente"></a>
-## Cliente
- <div align="center" name="inicio">
-  <a href="*"><img title="instituto" src="logoinstituto@4x.png" style="width: 300px;" /></a>
-</div>
- O Instituto Vorp,
-é uma organização sem fins lucrativos que atua apoiando projetos sociais e promovendo ações solidárias em comunidades vulneráveis. Suas atividades envolvem arrecadação e distribuição de roupas, brinquedos, limentos e itens de higiene, além de parcerias com outras iniciativas sociais. 
-Atualmente, o controle das doações e atendimentos é feito de forma manual, utilizando planilhas e registros físicos, o que dificulta o acompanhamento das ações e a transparência com os doadores.
+### Infraestrutura
+- **Supabase**: Hospedagem do banco de dados PostgreSQL na nuvem.
 
-<a name="requisitos"></a>
-## Requisitos Funcionais, Não Funcionais e de Negócios
-| Código | Funcionalidade                                                                 | Situação          |
-|:-------:|:------------------------------------------------------------------------------|:------------------|
-| RF01    | Permitir a visualização pública das ações realizadas pelo Instituto Vorp.     | Em desenvolvimento |
-| RF02    | Exibir fotos das ações e eventos sociais promovidos pelo Instituto.           | Pendente           |
-| RF03    | Criar uma seção “Transparência” com informações sobre as doações recebidas e aplicadas. | Em desenvolvimento |
-| RF04    | Apresentar uma imagem ilustrativa (print) do dashboard com link de acesso externo ao painel interativo. | Planejado          |
-| RF05    | Permitir filtragem das informações no dashboard por período, tipo de doação e destino. | Planejado          |
-| RF06    | Disponibilizar formulário online para cadastro de voluntários.                 | Em desenvolvimento |
-| RF07    | Coletar nome, e-mail, telefone e disponibilidade no formulário de voluntariado. | Planejado          |
-| RF08    | Exibir página com instruções de como realizar doações.                        | Em desenvolvimento |
-| RF09    | Garantir acesso administrativo ao coordenador para atualizar fotos e dados.    | Em desenvolvimento |
-| RF10    | Permitir o cadastro de novas ações e eventos via painel administrativo.        | Planejado          |
-| RF11    | Exibir no dashboard o total arrecadado por mês.                               | Em desenvolvimento |
-| RF12    | Exibir lista de doações com data, valor e destino.                            | Em desenvolvimento |
-| RNF01   | Tornar o site responsivo para desktop e mobile.                             | Em desenvolvimento |
-| RNF02   | Garantir tempo de carregamento inferior a 3 segundos.                       | Planejado          |
-| RNF03   | Permitir acesso público sem necessidade de login.                           | Concluído          |
-| RNF04   | Aplicar identidade visual do Instituto (cores e tipografia).                | Em desenvolvimento |
-| RNF05   | Garantir privacidade dos dados pessoais conforme LGPD.                      | Em desenvolvimento |
-| RNF06   | Permitir manutenção simples pelo coordenador.                               | Planejado          |
-| RNF07   | Usar hospedagem com certificado SSL para segurança da navegação.            | Planejado          |
-| RN01    | Somente o coordenador pode inserir, editar ou excluir informações do sistema. | Concluído          |
-| RN02    | Exibir apenas o primeiro nome e a inicial do sobrenome dos doadores.          | Em desenvolvimento |
-| RN03    | Atualizar informações de doações a cada 15 dias ou 1 mês.                     | Planejado          |
-| RN04    | Não divulgar dados sensíveis como CPF ou endereço dos doadores.               | Concluído          |
-| RN05    | Restringir download de relatórios, permitindo apenas visualização no dashboard. | Em desenvolvimento |
+---
 
-<a name="instalacao"></a>
-## 🚀 Instalação e Execução
+## 📂 Estrutura do Projeto
 
-Para rodar o projeto localmente, siga os passos abaixo:
+O projeto é dividido em duas partes principais que precisam rodar simultaneamente:
 
-1.  **Pré-requisitos**: Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+1.  **`/server`**: Backend (API, Banco de Dados, Regras de Negócio).
+2.  **`/vite-project`**: Frontend (Telas, React, Axios).
 
-2.  **Instalação das dependências**:
-    Abra o terminal na pasta raiz do projeto e navegue até a pasta do código fonte:
-    ```bash
-    cd vite-project
-    npm install
-    ```
+---
 
-3.  **Rodando o projeto**:
-    Ainda no terminal, execute o comando para iniciar o servidor de desenvolvimento:
-    ```bash
-    npm run dev
-    ```
-    O projeto estará rodando no endereço indicado no terminal (geralmente `http://localhost:5173`).
+## 🛠️ Como Rodar o Projeto
 
-<a name="estrutura"></a>
-## 📂 Estrutura e Rotas
+Você precisará de dois terminais abertos: um para o Backend e outro para o Frontend.
 
-O projeto foi desenvolvido utilizando **React** com **Vite**. A estrutura de pastas está organizada da seguinte maneira:
+### 1. Configurando e Rodando o Backend (Servidor)
 
-- **src/components**: Componentes reutilizáveis como Navbar e Footer.
-- **src/pages**: As páginas principais da aplicação.
-- **src/assets**: Imagens e arquivos estáticos.
+No primeiro terminal:
 
-### Rotas da Aplicação
+```bash
+# Entre na pasta do servidor
+cd server
 
-As rotas estão configuradas no arquivo `App.jsx` utilizando `react-router-dom`:
+# Instale as dependências (caso seja a primeira vez)
+npm install
 
-- **`/`**: Página Inicial (Home) - Apresentação do instituto.
-- **`/login`**: Página de Login - Acesso restrito.
-- **`/voluntario`**: Página de Cadastro de Voluntários.
-- **`/donate`**: Página de Doações.
+# Inicie o servidor em modo de desenvolvimento
+npm run dev
+```
 
+*   **Porta**: O servidor rodará em `http://localhost:5000`.
+*   **Banco de Dados**: Ele se conectará automaticamente ao Supabase (configurado no `.env`).
+*   **Status**: Você verá mensagens como "Database connected" e "Database synced".
 
+### 2. Configurando e Rodando o Frontend (Interface)
 
+No segundo terminal:
+
+```bash
+# Entre na pasta do projeto frontend
+cd vite-project
+
+# Instale as dependências (caso seja a primeira vez)
+npm install
+
+# Inicie o servidor frontend
+npm run dev
+```
+
+*   **Porta**: O site abrirá em `http://localhost:5173`.
+*   **Acesso**: Abra seu navegador neste endereço.
+
+### 3. Build para Produção (Opcional)
+
+Caso queira gerar a versão otimizada para produção do frontend:
+
+```bash
+cd vite-project
+npm run build
+```
+
+---
+
+## 🔐 Acesso e Testes
+
+### Usuário Administrador Padrão
+Para acessar o sistema pela primeira vez, utilize as credenciais criadas (via seed):
+
+- **Login**: `admin@admin.com`
+- **Senha**: `admin`
+
+### Rotas e Funcionalidades
+- **`/` (Home)**: Página inicial (Protegida - Requer Login).
+- **`/login`**: Tela de Login (Pública).
+- **`/voluntario`**: Cadastro de Voluntários (Protegida - Salva no Banco).
+- **`/donate`**: Página de Doação (Protegida).
+
+*O sistema possui redirecionamento inteligente: se tentar acessar a Home sem logar, vai para o Login. Se tentar acessar o Login já logado, vai para a Home.*
+
+---
+
+## 📡 Testando a API (Postman / Insomnia)
+
+Se quiser testar apenas o Backend sem o Frontend, utilize as seguintes rotas em `http://localhost:5000`:
+
+### Autenticação
+- **POST** `/api/auth/login`
+    - Body (JSON): `{ "email": "admin@admin.com", "password": "admin" }`
+    - Retorno: Token JWT.
+
+- **POST** `/api/auth/register` (Para criar novos admins via API)
+    - Body (JSON): `{ "username": "Novo", "email": "novo@teste.com", "password": "123" }`
+
+### Voluntários (Requer Token no Header `Authorization: Bearer SEU_TOKEN`)
+- **GET** `/api/volunteers`: Lista todos os voluntários.
+- **POST** `/api/volunteers`: Cria um voluntário.
+    - Body: `{ "name": "João", "email": "joao@email.com", "phone": "99999999" }`
+- **PUT** `/api/volunteers/:id`: Edita um voluntário.
+- **DELETE** `/api/volunteers/:id`: Remove um voluntário.
+
+---
+
+## ☁️ Banco de Dados
+
+O banco de dados está hospedado no **Supabase**.
+Para visualizar os dados (usuários criados, voluntários cadastrados), acesse o painel do projeto no Supabase e vá em **Table Editor**.
+
+- Tabela `Users`: Administradores do sistema.
+- Tabela `Volunteers`: Voluntários cadastrados pelo formulário.
