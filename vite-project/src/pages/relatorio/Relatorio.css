@@ -1,0 +1,72 @@
+.relatorio-container {
+  padding: 24px;
+  min-height: calc(100vh - 140px);
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.relatorio-title {
+  font-size: 2rem;
+  color: #082B5D;
+  margin-bottom: 16px;
+}
+
+.relatorio-status {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.relatorio-error {
+  color: #b00020;
+  margin-bottom: 12px;
+}
+
+.relatorio-table-wrapper {
+  overflow: auto;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.relatorio-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.relatorio-table th,
+.relatorio-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.relatorio-table thead th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.relatorio-empty {
+  text-align: center;
+  color: #777;
+}
+
+.relatorio-pagination {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.relatorio-pagination button {
+  padding: 8px 12px;
+  border: 1px solid #082B5D;
+  background: #082B5D;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.relatorio-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

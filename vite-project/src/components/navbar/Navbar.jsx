@@ -24,6 +24,7 @@ const Navbar = () => {
         <ul>
           <li><Link to="/login" onClick={toggleMenu}>Entrar</Link></li>
           <li><Link to="/donate" onClick={toggleMenu}>Doações</Link></li>
+          <li><Link to="/relatorio" onClick={toggleMenu}>Relatório</Link></li>
           <li><Link to="/" onClick={toggleMenu}>Quem Somos?</Link></li>
           <li><Link to="/voluntario" onClick={toggleMenu}>Como ajudar?</Link></li>
         </ul>

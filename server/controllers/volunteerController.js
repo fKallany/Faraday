@@ -1,17 +1,35 @@
-const { Volunteer } = require('../models');
+const { Volunteer, User } = require('../models');
 
+// Criar um novo voluntário e usuário para login
 const createVolunteer = async (req, res) => {
-  const { name, email, phone } = req.body;
-
   try {
-    const volunteer = await Volunteer.create({
+    const { name, email, phone, password } = req.body;
+
+    // Verificar se o usuário já existe
+    const userExists = await User.findOne({ where: { email } });
+    if (userExists) {
+      return res.status(400).json({ message: 'E-mail já cadastrado.' });
+    }
+
+    // Criar Usuário (Para Login)
+    await User.create({
+      username: name,
+      email,
+      password, // O hook do modelo fará o hash
+    });
+
+    // Criar Voluntário (Dados Específicos)
+    const newVolunteer = await Volunteer.create({
       name,
       email,
       phone,
+      status: 'pending', // Status inicial padrão
     });
-    res.status(201).json(volunteer);
+
+    res.status(201).json(newVolunteer);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error(error);
+    res.status(500).json({ message: 'Erro ao criar voluntário.' });
   }
 };
 

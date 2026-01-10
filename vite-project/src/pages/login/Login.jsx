@@ -44,6 +44,16 @@ const Login = () => {
       {error && <p className="error-message" style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
 
       <button className="login-btn" onClick={handleLogin}>Entrar</button>
+
+      <div style={{ marginTop: '20px' }}>
+        <button
+          className="login-btn"
+          style={{ backgroundColor: '#F79C33', fontSize: '16px' }}
+          onClick={() => navigate('/voluntario')}
+        >
+          Quero ser voluntário
+        </button>
+      </div>
     </div>
   );
 };
